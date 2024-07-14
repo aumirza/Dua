@@ -46,7 +46,10 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           {/* <Stack.Screen name="+not-found" /> */}
-          <Stack.Screen name="dua/[duaId]" options={{ title: "Dua | " }} />
+          <Stack.Screen
+            name="dua"
+            options={{ title: "Dua | ", animation: "slide_from_left" }}
+          />
         </Stack>
       </PaperProvider>
     </ThemeProvider>
