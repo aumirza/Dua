@@ -1,48 +1,51 @@
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import { useStore } from "@/store/store";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import { ActivityIndicator, Text } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useBookmarks } from "@/hooks/useBookMarks";
 
 const url =
   "https://secure.quranexplorer.com/DuaAppServices/Service1.svc/GetDuaDetailByDuaID/";
 
-const Dua = () => {
-  const [dua, setDua] = useState<DuaType>();
+export default function DuaPage() {
+  const [dua, setDua] = useState<IDua>();
   const [fetching, setFetching] = useState(false);
 
   const { duaId } = useLocalSearchParams();
   const navigation = useNavigation();
-  const { isBookmarked, addBookmark, removeBookmark } = useBookmarks();
 
-  const handleBookmark = () => {
-    if (!duaId || !dua) return;
-
-    if (isBookmarked(Number(duaId))) {
-      removeBookmark(Number(duaId));
-    } else {
-      addBookmark({ ...dua, DuaID: Number(duaId) });
-    }
-  };
+  const { isBookmarked, addBookmark, removeBookmark } = useStore();
+  const isCurrentDuaBookmarked = isBookmarked(Number(duaId));
 
   useEffect(() => {
+    if (!dua) return;
+
+    const handleBookmark = () => {
+      if (isCurrentDuaBookmarked) {
+        removeBookmark(Number(duaId));
+      } else {
+        addBookmark({ ...dua, DuaID: Number(duaId) });
+      }
+    };
+
     navigation.setOptions({
-      title: dua?.ShortDescription ?? "Dua",
+      title: dua.ShortDescription ?? "Dua",
       headerRight: () => (
         <TabBarIcon
           color="white"
-          name={isBookmarked(Number(duaId)) ? "bookmark" : "bookmark-outline"}
+          name={isCurrentDuaBookmarked ? "bookmark" : "bookmark-outline"}
           onPress={handleBookmark}
+          disabled={!dua}
         />
       ),
     });
-  }, [dua, duaId, isBookmarked]);
+  }, [dua, duaId, isCurrentDuaBookmarked]);
 
   useEffect(() => {
     const pathTofetch = url + duaId;
-    console.log("pathTofetch", pathTofetch);
+    // console.log("pathTofetch", pathTofetch);
     setFetching(true);
     fetch(pathTofetch)
       .then((res) => res.json())
@@ -77,6 +80,4 @@ const Dua = () => {
       )}
     </SafeAreaView>
   );
-};
-
-export default Dua;
+}

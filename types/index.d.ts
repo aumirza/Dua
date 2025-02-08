@@ -1,4 +1,4 @@
-interface DuaType {
+interface IDua {
   DuaID: number;
   ArabicAudio: string;
   DescLanguageName: string;

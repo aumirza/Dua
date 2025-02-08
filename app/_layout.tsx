@@ -12,7 +12,6 @@ import {
   DefaultTheme as navDefaulttTheme,
 } from "@react-navigation/native";
 import { PaperDarkTheme, PaperDefaultTheme } from "@/constants/theme";
-import { BookmarksProvider } from "@/contexts/BookmarksContext";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -42,7 +41,7 @@ export default function RootLayout() {
     colorScheme === "dark" ? PaperDarkTheme : PaperDefaultTheme;
 
   return (
-    <BookmarksProvider>
+    // <ThemeProvider theme={colorScheme === "dark" ? DarkTheme : LightTheme}>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : LightTheme}>
         <PaperProvider theme={paperTheme}>
           <Stack>
@@ -55,6 +54,5 @@ export default function RootLayout() {
           </Stack>
         </PaperProvider>
       </ThemeProvider>
-    </BookmarksProvider>
   );
 }
