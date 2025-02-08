@@ -1,18 +1,36 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Appearance } from "react-native";
 
 interface IStoreState {
   bookmarks: IDua[];
   hydrated: boolean;
+  memorized: IDua[];
+  theme: "light" | "dark" | "system";
+  duaCache: Record<number, IDua>;
+  duaOfTheDay?: IDua;
+  duaOfTheDayExpiry?: number;
 }
+
 interface IStoreActions {
   setHydrated: () => void;
   isBookmarked: (duaId: number) => boolean;
   addBookmark: (dua: IDua) => void;
   removeBookmark: (duaId: number) => void;
   clearBookmarks: () => void;
+  isMemorized: (duaId: number) => boolean;
+  addMemorized: (dua: IDua) => void;
+  removeMemorized: (duaId: number) => void;
+  clearMemorized: () => void;
+  clearStorage?: () => void; // optional since it's only available in dev
+  setTheme: (theme: "light" | "dark" | "system") => void;
+  getTheme: () => "light" | "dark";
+  getCachedDua: (duaId: number) => IDua | undefined;
+  cacheDua: (dua: IDua) => void;
+  setDuaOfTheDay: (dua: IDua) => void;
+  getDuaOfTheDay: () => { dua: IDua | undefined; expired: boolean };
 }
 
 export const useStore = create<IStoreState & IStoreActions>()(
@@ -20,22 +38,19 @@ export const useStore = create<IStoreState & IStoreActions>()(
     immer((set, get) => ({
       hydrated: false,
       bookmarks: [],
-      syncBookmarks: async () => {
-        const stored = await AsyncStorage.getItem("bookmarks");
-        if (stored) {
-          set({ bookmarks: JSON.parse(stored) });
-        }
-      },
+      memorized: [],
+      theme: "system",
+      duaCache: {},
+      duaOfTheDay: undefined,
+      duaOfTheDayExpiry: undefined,
 
       isBookmarked: (duaId: number) =>
         get().bookmarks.some((dua) => dua.DuaID === duaId),
 
       addBookmark: (dua: IDua) => {
-        // setBookmarks((prev) => [...prev, dua]);
-
-        set((state) => ({
-          bookmarks: [...state.bookmarks, dua],
-        }));
+        set((state) => {
+          state.bookmarks.push(dua);
+        });
       },
 
       removeBookmark: (duaId: number) => {
@@ -47,9 +62,71 @@ export const useStore = create<IStoreState & IStoreActions>()(
       clearBookmarks: () => {
         set({ bookmarks: [] });
       },
+
+      isMemorized: (duaId: number) =>
+        Boolean(get().memorized.some((dua) => dua.DuaID === duaId)),
+
+      addMemorized: (dua: IDua) =>
+        set((state) => {
+          state.memorized.push(dua);
+        }),
+
+      removeMemorized: (duaId: number) =>
+        set((state) => {
+          const index = state.memorized.findIndex((m) => m.DuaID === duaId);
+          if (index !== -1) {
+            state.memorized.splice(index, 1);
+          }
+        }),
+
+      clearMemorized: () => set({ memorized: [] }),
+
       setHydrated() {
         set({ hydrated: true });
       },
+
+      setTheme: (theme) => set({ theme }),
+
+      getTheme: () => {
+        const theme = get().theme;
+        if (theme === "system") {
+          return Appearance.getColorScheme() || "light";
+        }
+        return theme;
+      },
+
+      getCachedDua: (duaId: number) => {
+        return get().duaCache[duaId];
+      },
+
+      cacheDua: (dua: IDua) => {
+        set((state) => {
+          state.duaCache[dua.DuaID] = dua;
+        });
+      },
+
+      setDuaOfTheDay: (dua: IDua) => {
+        const expiry = Date.now() + 24 * 60 * 60 * 1000; // 24 hours from now
+        set({ duaOfTheDay: dua, duaOfTheDayExpiry: expiry });
+      },
+
+      getDuaOfTheDay: () => {
+        const { duaOfTheDay, duaOfTheDayExpiry } = get();
+        const expired = !duaOfTheDayExpiry || Date.now() > duaOfTheDayExpiry;
+        return { dua: duaOfTheDay, expired };
+      },
+
+      ...(__DEV__ && {
+        clearStorage: () => {
+          set({
+            bookmarks: [],
+            memorized: [],
+            hydrated: false,
+            theme: "system",
+            duaCache: {},
+          });
+        },
+      }),
     })),
     {
       name: "dua-storage", // name of the item in the storage (must be unique)
