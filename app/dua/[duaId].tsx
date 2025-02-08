@@ -1,10 +1,10 @@
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { BookmarksStorage } from "@/utils/BookmarksStorage";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import { ActivityIndicator, Text } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useBookmarks } from "@/hooks/useBookMarks";
 
 const url =
   "https://secure.quranexplorer.com/DuaAppServices/Service1.svc/GetDuaDetailByDuaID/";
@@ -12,25 +12,18 @@ const url =
 const Dua = () => {
   const [dua, setDua] = useState<DuaType>();
   const [fetching, setFetching] = useState(false);
-  const [isBookmarked, setIsBookmarked] = useState(false);
 
   const { duaId } = useLocalSearchParams();
   const navigation = useNavigation();
-
-  useEffect(() => {
-    if (!duaId) return;
-    BookmarksStorage.isAlreadyBookmarked(Number(duaId)).then((isBookmarked) => {
-      setIsBookmarked(isBookmarked);
-    });
-  }, []);
+  const { isBookmarked, addBookmark, removeBookmark } = useBookmarks();
 
   const handleBookmark = () => {
     if (!duaId || !dua) return;
-    setIsBookmarked(!isBookmarked);
-    if (isBookmarked) {
-      BookmarksStorage.removeBookmark(Number(duaId));
+
+    if (isBookmarked(Number(duaId))) {
+      removeBookmark(Number(duaId));
     } else {
-      BookmarksStorage.addBookmark({ ...dua, DuaID: Number(duaId) });
+      addBookmark({ ...dua, DuaID: Number(duaId) });
     }
   };
 
@@ -40,12 +33,12 @@ const Dua = () => {
       headerRight: () => (
         <TabBarIcon
           color="white"
-          name={isBookmarked ? "bookmark" : "bookmark-outline"}
+          name={isBookmarked(Number(duaId)) ? "bookmark" : "bookmark-outline"}
           onPress={handleBookmark}
         />
       ),
     });
-  }, [dua, isBookmarked]);
+  }, [dua, duaId, isBookmarked]);
 
   useEffect(() => {
     const pathTofetch = url + duaId;

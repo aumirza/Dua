@@ -15,7 +15,7 @@ const addBookmark = async (dua: DuaType) => {
 
 const removeBookmark = async (duaId: number) => {
   const bookmarks = (await getItem(keyName)) ?? [];
-  const newBookmarks = bookmarks.filter((id: number) => id !== duaId);
+  const newBookmarks = bookmarks.filter((dua: DuaType) => dua.DuaID !== duaId);
   setItem(keyName, newBookmarks);
 };
 
