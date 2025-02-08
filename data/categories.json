@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Daily Activities",
+    "description": "Duas related to everyday activities like waking up, dressing, and undressing.",
+    "image": "daily_activities.jpg"
+  },
+  {
+    "name": "Hygiene",
+    "description": "Duas for activities related to personal hygiene, such as entering and leaving the restroom, and performing ablution.",
+    "image": "hygiene.jpg"
+  },
+  {
+    "name": "Prayer",
+    "description": "Duas associated with prayer, including hearing the Athan, entering and leaving the mosque, and completing prayers.",
+    "image": "prayer.jpg"
+  },
+  {
+    "name": "Emotional Well-being",
+    "description": "Duas for emotional support, such as dealing with fear, loneliness, depression, and anger.",
+    "image": "emotional_wellbeing.jpg"
+  },
+  {
+    "name": "Protection",
+    "description": "Duas for seeking protection from harm, enemies, and evil.",
+    "image": "protection.jpg"
+  },
+  {
+    "name": "Spiritual Focus",
+    "description": "Duas to enhance spiritual focus, such as seeking forgiveness, avoiding distractions during prayer, and fearing Shirk.",
+    "image": "spiritual_focus.jpg"
+  },
+  {
+    "name": "Personal Challenges",
+    "description": "Duas for overcoming difficulties, failures, and disliked events.",
+    "image": "personal_challenges.jpg"
+  },
+  {
+    "name": "Family",
+    "description": "Duas related to family, such as seeking protection for children.",
+    "image": "family.jpg"
+  },
+  {
+    "name": "End of Life",
+    "description": "Duas for situations related to death, such as encouraging the dying person and closing the eyes of the deceased.",
+    "image": "end_of_life.jpg"
+  },
+  {
+    "name": "Funeral",
+    "description": "Duas for funeral-related activities, including prayers for boys and girls, placing the dead in the grave, and visiting graves.",
+    "image": "funeral.jpg"
+  },
+  {
+    "name": "Natural Phenomena",
+    "description": "Duas for natural events like thunder, rain, and wind.",
+    "image": "natural_phenomena.jpg"
+  },
+  {
+    "name": "Eating",
+    "description": "Duas related to eating and drinking, such as before meals and after drinking milk.",
+    "image": "eating.jpg"
+  },
+  {
+    "name": "Social Interactions",
+    "description": "Duas for social situations, such as responding to greetings, praising others, and expressing gratitude.",
+    "image": "social_interactions.jpg"
+  },
+  {
+    "name": "Marriage",
+    "description": "Duas related to marriage, such as for the groom and before intercourse.",
+    "image": "marriage.jpg"
+  },
+  {
+    "name": "Financial",
+    "description": "Duas for financial matters, such as receiving a loan.",
+    "image": "financial.jpg"
+  },
+  {
+    "name": "Travel",
+    "description": "Duas for traveling, including entering a town, riding a vehicle, and returning from a journey.",
+    "image": "travel.jpg"
+  },
+  {
+    "name": "Hajj & Umrah",
+    "description": "Duas specific to Hajj and Umrah, such as standing at Safa and Marwah and on the day of Arafat.",
+    "image": "hajj_umrah.jpg"
+  },
+  {
+    "name": "Health",
+    "description": "Duas for health-related situations, such as feeling pain in the body.",
+    "image": "health.jpg"
+  },
+  {
+    "name": "Sacrifice",
+    "description": "Duas for slaughtering or sacrificing an animal.",
+    "image": "sacrifice.jpg"
+  },
+  {
+    "name": "Seasonal",
+    "description": "Duas for seasonal events, such as seeing the first dates of the season.",
+    "image": "seasonal.jpg"
+  }
+]

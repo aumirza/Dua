@@ -1,0 +1,752 @@
+[
+  {
+    "DuaID": 816,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHEN GETTING DRESSED",
+    "Title": "",
+    "Category": "Daily Activities"
+  },
+  {
+    "DuaID": 817,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHEN PUTTING ON NEW CLOTHES",
+    "Title": "",
+    "Category": "Daily Activities"
+  },
+  {
+    "DuaID": 821,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "ENTERIGN THE RESTROOM",
+    "Title": "",
+    "Category": "Hygiene"
+  },
+  {
+    "DuaID": 822,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "LEAVING THE RESTROOM(Toilet)",
+    "Title": "",
+    "Category": "Hygiene"
+  },
+  {
+    "DuaID": 823,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "BEFORE PERFORMING ABLUTION",
+    "Title": "",
+    "Category": "Hygiene"
+  },
+  {
+    "DuaID": 833,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "HEARING THE ATHAN(AZAAN)[CALL TO PRAYER]",
+    "Title": "",
+    "Category": "Prayer"
+  },
+  {
+    "DuaID": 832,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "LEAVINGTHE MOSQUE",
+    "Title": "",
+    "Category": "Prayer"
+  },
+  {
+    "DuaID": 834,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "HEARING THE ATHAN",
+    "Title": "",
+    "Category": "Prayer"
+  },
+  {
+    "DuaID": 835,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "After replying to the call of Mu’aththin ",
+    "Title": "",
+    "Category": "Prayer"
+  },
+  {
+    "DuaID": 875,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "COMLETING THE PRAYER",
+    "Title": "",
+    "Category": "Prayer"
+  },
+  {
+    "DuaID": 928,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "IF YOU ARE AFRAID TO GO TO SLEEP OR FEEL LONELY AND DEPRESSED",
+    "Title": "",
+    "Category": "Emotional Well-being"
+  },
+  {
+    "DuaID": 946,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION AGAINST AN ENEMY",
+    "Title": "",
+    "Category": "Protection"
+  },
+  {
+    "DuaID": 947,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "IF YOU FEAR PEOPLE MAY HARM YOU",
+    "Title": "",
+    "Category": "Protection"
+  },
+  {
+    "DuaID": 952,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION AGAINST THE DISTRACTIONS OF STAN DURING PRAYER AND RECITATION OF QUR’AN.",
+    "Title": "",
+    "Category": "Spiritual Focus"
+  },
+  {
+    "DuaID": 953,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHEN YOU FIND SOMETHING BECOMING DIFFICULT FOR YOU.",
+    "Title": "",
+    "Category": "Personal Challenges"
+  },
+  {
+    "DuaID": 954,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHEN SOMETHING YOU DISLIKE HAPPENS, OR FOR WHEN YOU FAIL TO ACHIEVE WHAT YOU ATTEMPT TO DO.",
+    "Title": "",
+    "Category": "Personal Challenges"
+  },
+  {
+    "DuaID": 957,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "SEEK ALLAH’S PROTECTION FOR CHILDREN",
+    "Title": "",
+    "Category": "Family"
+  },
+  {
+    "DuaID": 963,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "ENCOURAGE THE DYING PERSON TO SAY",
+    "Title": "",
+    "Category": "End of Life"
+  },
+  {
+    "DuaID": 964,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR WHEN TARGEDY TRIKES",
+    "Title": "",
+    "Category": "End of Life"
+  },
+  {
+    "DuaID": 965,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR CLOSING THE EYES OF THE DEAD",
+    "Title": "",
+    "Category": "End of Life"
+  },
+  {
+    "DuaID": 970,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR A BOY IN THE FUNERAL PRAYER",
+    "Title": "",
+    "Category": "Funeral"
+  },
+  {
+    "DuaID": 971,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR A GIRL IN THE FUNERAL PRAYER",
+    "Title": "",
+    "Category": "Funeral"
+  },
+  {
+    "DuaID": 974,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION TO BE RECITED WHEN PLACING THE DEAD IN HIS GRAVE",
+    "Title": "",
+    "Category": "Funeral"
+  },
+  {
+    "DuaID": 975,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION TO BE RECITED AFTER BURYING THE DEAD",
+    "Title": "",
+    "Category": "Funeral"
+  },
+  {
+    "DuaID": 976,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR VISITING GRAVES",
+    "Title": "",
+    "Category": "Funeral"
+  },
+  {
+    "DuaID": 979,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR WHEN IT THUNDERS",
+    "Title": "",
+    "Category": "Natural Phenomena"
+  },
+  {
+    "DuaID": 983,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATIONS FOR WHEN IT RAINS.",
+    "Title": "",
+    "Category": "Natural Phenomena"
+  },
+  {
+    "DuaID": 984,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "SUPPLICATION AFTER IT RAINS",
+    "Title": "",
+    "Category": "Natural Phenomena"
+  },
+  {
+    "DuaID": 985,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR THE WITHHOLDING OF THE RAIN",
+    "Title": "",
+    "Category": "Natural Phenomena"
+  },
+  {
+    "DuaID": 989,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION BEFORE EATING",
+    "Title": "",
+    "Category": "Eating"
+  },
+  {
+    "DuaID": 992,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHOEVER ALLAH HAS GIVEN MILK TO DRINK, SHOULD SAY:",
+    "Title": "",
+    "Category": "Eating"
+  },
+  {
+    "DuaID": 996,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "A DINNER GUEST’S INVOCATION FOR HIS HOST",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 997,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR SOMEONE WHO GIVES YOU DRINK OR OFFERS IT TO YOU",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 998,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR A FAMILY WHO INVITES YOU TO BREAK YOUR FAST WITH THEM",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 999,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "SOMEONE WHO OFFERS YOU FOOD WHEN YOU ARE FASTING, WHICH YOU DECLINE",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1000,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": " WHEN YOU SEE THE FIRST DATES OF THE SEASON",
+    "Title": "",
+    "Category": "Seasonal"
+  },
+  {
+    "DuaID": 1004,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "TO THE DISBELIEVER IF HE SNEEZES AND PRAISES ALLAH",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1005,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR THE GROOM",
+    "Title": "",
+    "Category": "Marriage"
+  },
+  {
+    "DuaID": 1006,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHAT GROOM SAYS UPON PURCHASING AN ANIMAL",
+    "Title": "",
+    "Category": "Marriage"
+  },
+  {
+    "DuaID": 1007,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION TO BE RECITED BEFORE INTERCOUSE",
+    "Title": "",
+    "Category": "Marriage"
+  },
+  {
+    "DuaID": 1008,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR ANGER",
+    "Title": "",
+    "Category": "Emotional Well-being"
+  },
+  {
+    "DuaID": 1009,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "IF YOU SEE SOMEONE AFFLICTED BY MISFORTUNE",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1010,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "SAY WHILE SITTING IN A ASSEMBLY",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1011,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "THE EXPIATION OF ASSEMBLY (Kaffaaratul Majlis)",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1012,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "FOR SOMEONE WHO SAYS: “May Allah forgive you”",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1013,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "FOR SOMEONE WHO DOES GOOD TO YOU",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1014,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "SOMEONE WHO TELLS YOU: “I LOVE YOU FOR THE SAKE OF ALLAH”",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1015,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "FOR SOMEONE WHO OFFERS YOU A SHAREOF HIS WEALTH",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1016,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": " FOR SOMEONE WHO LENDS YOU MONEY, UPON RECEIPT OF THE LOAN",
+    "Title": "",
+    "Category": "Financial"
+  },
+  {
+    "DuaID": 1017,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "FOR FEAR OF SHIRK",
+    "Title": "",
+    "Category": "Spiritual Focus"
+  },
+  {
+    "DuaID": 1018,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "FOR SOMEONE WHO TELLS YOU: “MAY ALLAH BLESS YOU”",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1019,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "AGAINST EVIL PROTENT",
+    "Title": "",
+    "Category": "Protection"
+  },
+  {
+    "DuaID": 1020,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR RIDING IN A VEHICLE OR ON AN ANIMAL",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1021,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR TRAVELING",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1022,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "UPON RETURNING FROM TRAVELING RECITE THE SAME AGAIN ADDING",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1023,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "ENTERING A TOWN OR CITY",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1024,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR  ENTERING A MARKET",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1025,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR WHEN YOUR VEHICLE OR MOUNT BEGINS TO FAIL",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1029,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "TRAVELER’S INVOCATION AT DAWN",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1030,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION FOR A LAYER (STOPPING ALONG THE WAY) ON THE JOURNEY)",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1031,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHAT TO SAY UPON RETURNING FROM A JURNEY",
+    "Title": "",
+    "Category": "Travel"
+  },
+  {
+    "DuaID": 1034,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "HOW TO REPLY TO A DISBELIEVER IF HE SAYS SALAM TO YOU",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1035,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "SOMEONE YOU HAVE SPOKEN ILL TO",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1036,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "HOW A MUSLIM SHOULD PRAISE AN OTHER MUSLIM",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1037,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHAT A MUSLIM SHOULD SAY WHEN HE IS PRAISED",
+    "Title": "",
+    "Category": "Social Interactions"
+  },
+  {
+    "DuaID": 1038,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "THE PILGRIM’S ANNOUNCEMENT OF HIS ARRIVAL FORHAJJ OR UMRAH",
+    "Title": "",
+    "Category": "Hajj & Umrah"
+  },
+  {
+    "DuaID": 1039,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION TO BE RECITED BETWEEN THE YEMENI CORNER AND THE BLACK STONE",
+    "Title": "",
+    "Category": "Hajj & Umrah"
+  },
+  {
+    "DuaID": 1043,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "INVOCATION TO BE RECITED ON THE DAY OF ARAFAAT",
+    "Title": "",
+    "Category": "Hajj & Umrah"
+  },
+  {
+    "DuaID": 1047,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHAT TO SAY WHEN YOU FEEL A PAIN IN YOUR BODY",
+    "Title": "",
+    "Category": "Health"
+  },
+  {
+    "DuaID": 1048,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHAT SAY WHEN YOU FEEL FRIGHTENED",
+    "Title": "",
+    "Category": "Emotional Well-being"
+  },
+  {
+    "DuaID": 1049,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHAT TO SAY WHEN SLAUGHTERING OR SACRIFICING AN ANIMAL",
+    "Title": "",
+    "Category": "Sacrifice"
+  },
+  {
+    "DuaID": 1050,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 0,
+    "ParentID": 0,
+    "ShortDescription": "WHAT TO SAY TO FOILTHE DEVIL’S PLOTS",
+    "Title": "",
+    "Category": "Spiritual Focus"
+  },
+  {
+    "DuaID": 0,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 166,
+    "ParentID": 0,
+    "ShortDescription": "",
+    "Title": "WHEN YOU WAKE UP",
+    "Category": "Daily Activities"
+  },
+  {
+    "DuaID": 0,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 167,
+    "ParentID": 0,
+    "ShortDescription": "",
+    "Title": "REPENTANCE AND SEEKING FORGIVENESS",
+    "Category": "Spiritual Focus"
+  },
+  {
+    "DuaID": 0,
+    "ErrorID": 0,
+    "ErrorText": "",
+    "IndexID": 168,
+    "ParentID": 0,
+    "ShortDescription": "",
+    "Title": "INVOCATION TO BE RECITED WHILE STANDING AT SAFA AND MARWAH",
+    "Category": "Hajj & Umrah"
+  }
+]
