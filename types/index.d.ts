@@ -1,5 +1,9 @@
-interface IDua {
+interface IDuaBase {
   DuaID: number;
+  ShortDescription: string;
+}
+
+interface IDua extends IDuaBase {
   ArabicAudio: string;
   DescLanguageName: string;
   ErrorID: number;
@@ -8,7 +12,6 @@ interface IDua {
   KeywordText: string;
   LongDescription: string;
   Script: string;
-  ShortDescription: string;
   TransLanguageName: string;
   Translation: string;
   TranslationAudio: string;
@@ -20,13 +23,11 @@ interface IDua {
   WhyToRead: string;
 }
 
-interface IDuaItem {
-  DuaID: number;
+interface IDuaItem extends IDuaBase {
   ErrorID: number;
   ErrorText: string;
   IndexID: number;
   ParentID: number;
-  ShortDescription: string;
   Title: string;
 }
 
