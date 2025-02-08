@@ -1,14 +1,15 @@
-import { Tabs } from "expo-router";
 import React from "react";
+import { Tabs } from "expo-router";
+import { FontAwesome5 } from "@expo/vector-icons";
 
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { FontAwesome5 } from "@expo/vector-icons";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarLabelStyle: { fontSize: 12 },
       }}
     >
       <Tabs.Screen
@@ -41,6 +42,15 @@ export default function TabLayout() {
               name={focused ? "bookmark" : "bookmark-outline"}
               color={color}
             />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="setting"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? "cog" : "cog-outline"} color={color} />
           ),
         }}
       />
