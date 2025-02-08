@@ -2,44 +2,22 @@ import { RefreshControl, ScrollView, View } from "react-native";
 import { Text } from "react-native-paper";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useEffect, useState } from "react";
-import { BookmarksStorage } from "@/utils/BookmarksStorage";
 import DuasList from "@/components/DuasList";
+import { useBookmarks } from "@/hooks/useBookMarks";
 
 const Tab = createMaterialTopTabNavigator();
 
 const AllBookMarks = () => {
-  const [bookmarks, setBookmarks] = useState<DuaType[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchBookmarks = () => {
-    setLoading(true);
-    BookmarksStorage.getBookmarks().then((bookmarks) => {
-      setLoading(false);
-      setBookmarks(bookmarks);
-    });
-  };
-
-  useEffect(() => {
-    fetchBookmarks();
-  }, []);
+  const { bookmarks, loading, syncBookmarks } = useBookmarks();
 
   return (
     <ScrollView
       refreshControl={
-        <RefreshControl refreshing={loading} onRefresh={fetchBookmarks} />
+        <RefreshControl refreshing={loading} onRefresh={syncBookmarks} />
       }
     >
       <DuasList duaList={bookmarks} />
     </ScrollView>
-  );
-};
-
-const BookMarks = () => {
-  return (
-    <View>
-      <Text>Bookmarks</Text>
-    </View>
   );
 };
 
@@ -60,9 +38,8 @@ const bookmarks = () => {
       initialRouteName="Bookmarks"
       screenOptions={{ lazy: true }}
     >
-      <Tab.Screen name="Bookmarks" component={AllBookMarks} />
-      <Tab.Screen name="Memorised" component={BookMarks} />
-      <Tab.Screen name="Saved" component={Memorised} />
+      <Tab.Screen name="Saved" component={AllBookMarks} />
+      <Tab.Screen name="Memorised" component={Memorised} />
     </Tab.Navigator>
   );
 };

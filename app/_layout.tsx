@@ -12,6 +12,7 @@ import {
   DefaultTheme as navDefaulttTheme,
 } from "@react-navigation/native";
 import { PaperDarkTheme, PaperDefaultTheme } from "@/constants/theme";
+import { BookmarksProvider } from "@/contexts/BookmarksContext";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -41,17 +42,19 @@ export default function RootLayout() {
     colorScheme === "dark" ? PaperDarkTheme : PaperDefaultTheme;
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : LightTheme}>
-      <PaperProvider theme={paperTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          {/* <Stack.Screen name="+not-found" /> */}
-          <Stack.Screen
-            name="dua"
-            options={{ title: "Dua | ", animation: "slide_from_left" }}
-          />
-        </Stack>
-      </PaperProvider>
-    </ThemeProvider>
+    <BookmarksProvider>
+      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : LightTheme}>
+        <PaperProvider theme={paperTheme}>
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            {/* <Stack.Screen name="+not-found" /> */}
+            <Stack.Screen
+              name="dua"
+              options={{ title: "Dua | ", animation: "slide_from_left" }}
+            />
+          </Stack>
+        </PaperProvider>
+      </ThemeProvider>
+    </BookmarksProvider>
   );
 }
