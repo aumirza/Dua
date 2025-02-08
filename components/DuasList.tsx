@@ -1,37 +1,51 @@
 import { Link } from "expo-router";
 import React, { FC } from "react";
 import { TouchableOpacity, View } from "react-native";
-import { List, Text } from "react-native-paper";
+import { List, Text, useTheme } from "react-native-paper";
 
-const DuasList: FC<{ duaList: DuaType[] | duaListItem[] }> = ({ duaList }) => {
+const DuasList: FC<{ duaList: DuaType[] | IDuaItem[] }> = ({ duaList }) => {
+  const theme = useTheme();
+
   return (
     <List.Section>
       {duaList.map((dua, i) => (
         <Link
-          key={dua.DuaID + dua.ShortDescription}
-          href={{ pathname: "/dua/" + dua.DuaID }}
-          // href={{ pathname: "/dua/[duaID]", params: { duaId: dua.DuaID } }}
+          key={dua.DuaID}
+          href={{ pathname: "/dua/[duaId]", params: { duaId: dua.DuaID } }}
           asChild
         >
           <TouchableOpacity>
             <List.Item
               style={{
-                paddingHorizontal: 10,
+                paddingHorizontal: 16,
+                paddingVertical: 8,
+                borderBottomWidth: 1,
+                borderBottomColor: theme.colors.outlineVariant,
               }}
               title={dua.ShortDescription}
+              titleNumberOfLines={2}
+              titleStyle={{
+                fontSize: 16,
+                marginLeft: 8,
+              }}
               left={(props) => (
                 <View
                   {...props}
                   style={{
-                    borderRadius: 100,
-                    backgroundColor: "primary",
-                    width: 50,
-                    height: 50,
+                    borderRadius: 25,
+                    backgroundColor: theme.colors.primaryContainer,
+                    width: 40,
+                    height: 40,
                     justifyContent: "center",
                     alignItems: "center",
                   }}
                 >
-                  <Text variant="titleMedium">{i + 1}</Text>
+                  <Text
+                    variant="titleMedium"
+                    style={{ color: theme.colors.onPrimaryContainer }}
+                  >
+                    {i + 1}
+                  </Text>
                 </View>
               )}
             />
