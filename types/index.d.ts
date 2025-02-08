@@ -20,7 +20,7 @@ interface DuaType {
   WhyToRead: string;
 }
 
-interface duaListItem {
+interface IDuaItem {
   DuaID: number;
   ErrorID: number;
   ErrorText: string;
@@ -28,4 +28,11 @@ interface duaListItem {
   ParentID: number;
   ShortDescription: string;
   Title: string;
+}
+
+interface ICategory {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
 }
