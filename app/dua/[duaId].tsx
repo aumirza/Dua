@@ -1,23 +1,43 @@
-import { TabBarIcon } from "@/components/navigation/TabBarIcon";
-import { useStore } from "@/store/store";
-import { useLocalSearchParams, useNavigation } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
-import { ActivityIndicator, Text } from "react-native-paper";
+import { ActivityIndicator, Text, Button, useTheme } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useLocalSearchParams, useNavigation } from "expo-router";
 
-const url =
-  "https://secure.quranexplorer.com/DuaAppServices/Service1.svc/GetDuaDetailByDuaID/";
+import { useStore } from "@/store/store";
+import { fetchDuaById } from "@/services/ApiService";
+import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import { toTitleCase } from "@/utils/case";
 
 export default function DuaPage() {
   const [dua, setDua] = useState<IDua>();
   const [fetching, setFetching] = useState(false);
+  const theme = useTheme();
 
   const { duaId } = useLocalSearchParams();
   const navigation = useNavigation();
 
-  const { isBookmarked, addBookmark, removeBookmark } = useStore();
+  const {
+    isBookmarked,
+    addBookmark,
+    removeBookmark,
+    isMemorized,
+    addMemorized,
+    removeMemorized,
+  } = useStore();
+
   const isCurrentDuaBookmarked = isBookmarked(Number(duaId));
+  const isCurrentDuaMemorized = isMemorized(Number(duaId));
+
+  const handleMemorised = () => {
+    if (!dua) return;
+
+    if (isCurrentDuaMemorized) {
+      removeMemorized(Number(duaId));
+    } else {
+      addMemorized(dua);
+    }
+  };
 
   useEffect(() => {
     if (!dua) return;
@@ -26,34 +46,35 @@ export default function DuaPage() {
       if (isCurrentDuaBookmarked) {
         removeBookmark(Number(duaId));
       } else {
-        addBookmark({ ...dua, DuaID: Number(duaId) });
+        addBookmark(dua);
       }
     };
 
     navigation.setOptions({
-      title: dua.ShortDescription ?? "Dua",
+      title: toTitleCase(dua.ShortDescription) ?? "Dua",
       headerRight: () => (
-        <TabBarIcon
-          color="white"
-          name={isCurrentDuaBookmarked ? "bookmark" : "bookmark-outline"}
-          onPress={handleBookmark}
-          disabled={!dua}
-        />
+        <View style={{ flexDirection: "row", gap: 15 }}>
+          <TabBarIcon
+            color={theme.colors.primary}
+            name={isCurrentDuaBookmarked ? "bookmark" : "bookmark-outline"}
+            onPress={handleBookmark}
+            disabled={!dua}
+          />
+        </View>
       ),
     });
   }, [dua, duaId, isCurrentDuaBookmarked]);
 
   useEffect(() => {
-    const pathTofetch = url + duaId;
-    // console.log("pathTofetch", pathTofetch);
     setFetching(true);
-    fetch(pathTofetch)
-      .then((res) => res.json())
+    fetchDuaById(Number(duaId))
       .then((data) => {
-        setFetching(false);
         setDua(data);
+      })
+      .finally(() => {
+        setFetching(false);
       });
-  }, []);
+  }, [duaId]);
 
   return (
     <SafeAreaView>
@@ -66,7 +87,9 @@ export default function DuaPage() {
             gap: 30,
           }}
         >
-          <Text variant="titleMedium">{dua?.ShortDescription}</Text>
+          <Text variant="titleMedium">
+            {toTitleCase(dua?.ShortDescription ?? "")}
+          </Text>
           <Text variant="headlineMedium">{dua?.Script}</Text>
           <View style={{ gap: 5 }}>
             <Text variant="titleSmall">Transliteration</Text>
@@ -75,6 +98,15 @@ export default function DuaPage() {
           <View style={{ gap: 5 }}>
             <Text variant="titleSmall">Translation</Text>
             <Text variant="bodyMedium">{dua?.Translation}</Text>
+          </View>
+          <View style={{ gap: 10 }}>
+            <Button
+              mode={isCurrentDuaMemorized ? "contained" : "outlined"}
+              icon="check-circle"
+              onPress={handleMemorised}
+            >
+              {isCurrentDuaMemorized ? "Memorized" : "Mark as Memorized"}
+            </Button>
           </View>
         </View>
       )}
