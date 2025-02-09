@@ -3,6 +3,7 @@ import duas from "@/data/duas.json";
 import { waitFor } from "@/utils/wait";
 import { uuid } from "@/utils/uuid";
 import { useStore } from "@/store/store";
+import { MMKVStorage } from "./MMKVStorage";
 
 const DUA_API_URL =
   "https://secure.quranexplorer.com/DuaAppServices/Service1.svc/GetDuaDetailByDuaID/";
@@ -22,8 +23,7 @@ export async function fetchDuasCategories() {
 }
 
 export async function fetchDuaById(duaId: number): Promise<IDua> {
-  const { getCachedDua, cacheDua } = useStore.getState();
-  const cachedDua = getCachedDua(duaId);
+  const cachedDua = MMKVStorage.getCachedDua(duaId);
 
   if (cachedDua) {
     return cachedDua;
@@ -33,7 +33,7 @@ export async function fetchDuaById(duaId: number): Promise<IDua> {
   const data = await response.json();
   const dua = { ...data, DuaID: duaId };
 
-  cacheDua(dua);
+  MMKVStorage.cacheDua(dua);
   return dua;
 }
 

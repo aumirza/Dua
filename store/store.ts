@@ -9,7 +9,6 @@ interface IStoreState {
   hydrated: boolean;
   memorized: IDua[];
   theme: "light" | "dark" | "system";
-  duaCache: Record<number, IDua>;
   duaOfTheDay?: IDua;
   duaOfTheDayExpiry?: number;
 }
@@ -27,8 +26,6 @@ interface IStoreActions {
   clearStorage?: () => void; // optional since it's only available in dev
   setTheme: (theme: "light" | "dark" | "system") => void;
   getTheme: () => "light" | "dark";
-  getCachedDua: (duaId: number) => IDua | undefined;
-  cacheDua: (dua: IDua) => void;
   setDuaOfTheDay: (dua: IDua) => void;
   getDuaOfTheDay: () => { dua: IDua | undefined; expired: boolean };
 }
@@ -40,7 +37,6 @@ export const useStore = create<IStoreState & IStoreActions>()(
       bookmarks: [],
       memorized: [],
       theme: "system",
-      duaCache: {},
       duaOfTheDay: undefined,
       duaOfTheDayExpiry: undefined,
 
@@ -95,16 +91,6 @@ export const useStore = create<IStoreState & IStoreActions>()(
         return theme;
       },
 
-      getCachedDua: (duaId: number) => {
-        return get().duaCache[duaId];
-      },
-
-      cacheDua: (dua: IDua) => {
-        set((state) => {
-          state.duaCache[dua.DuaID] = dua;
-        });
-      },
-
       setDuaOfTheDay: (dua: IDua) => {
         const expiry = Date.now() + 24 * 60 * 60 * 1000; // 24 hours from now
         set({ duaOfTheDay: dua, duaOfTheDayExpiry: expiry });
@@ -123,7 +109,6 @@ export const useStore = create<IStoreState & IStoreActions>()(
             memorized: [],
             hydrated: false,
             theme: "system",
-            duaCache: {},
           });
         },
       }),
